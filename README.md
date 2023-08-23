@@ -11,6 +11,8 @@
 - [ ] Salvar informações alteradas
 - [x] Cancelar e retornar ao menu principal
 - [ ] Alterar projeto para outro formato/estilo/tema
+- [ ] Implementar código de ação
+- [ ] 
 
 ---
 #### 🔧 FERRAMENTAS / TECNOLOGIAS:

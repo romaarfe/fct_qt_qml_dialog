@@ -10,6 +10,7 @@
 - [x] Permitir inserir informações por textbox
 - [ ] Salvar informações alteradas
 - [x] Cancelar e retornar ao menu principal
+- [ ] Alterar projeto para outro formato/estilo/tema
 
 ---
 #### 🔧 FERRAMENTAS / TECNOLOGIAS:

@@ -13,7 +13,6 @@
 - [ ] Alterar projeto para outro formato/estilo/tema
 - [ ] Implementar código de ação QML
 - [ ] Implementar código de ação C++
-- [ ] Implementar código de ação Javascript
 
 ---
 #### 🔧 FERRAMENTAS / TECNOLOGIAS:

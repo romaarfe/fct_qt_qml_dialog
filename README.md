@@ -1,5 +1,5 @@
 <h3 align="center"> 
-  🚧 QML DIALOG 🚧
+  🚧 PRIMEIRA QML DIALOG 🚧
 </h3>
 
 ---

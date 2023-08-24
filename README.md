@@ -10,7 +10,7 @@
 - [x] Permitir inserir informações por textbox
 - [ ] Salvar informações alteradas
 - [x] Cancelar e retornar ao menu principal
-- [ ] Alterar projeto para outro formato/estilo/tema
+- [x] Alterar projeto para outro formato/estilo/tema
 - [ ] Implementar código de ação QML
 - [ ] Implementar código de ação C++
 

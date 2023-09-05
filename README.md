@@ -12,7 +12,7 @@
 - [x] Cancelar e retornar ao menu principal
 - [x] Alterar projeto para outro formato/estilo/tema
 - [x] Implementar código de ação QML
-- [ ] Implementar código de ação C++
+- [x] Implementar código de ação C++
 
 ---
 #### 🔧 FERRAMENTAS / TECNOLOGIAS:

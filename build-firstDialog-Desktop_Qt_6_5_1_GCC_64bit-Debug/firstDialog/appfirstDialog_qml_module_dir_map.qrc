@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="/qt/qml/firstDialog">/home/administrator/Formacao/Projeto/QML/build-firstDialog-Desktop_Qt_6_5_1_GCC_64bit-Debug/firstDialog</file>
-
-  </qresource>
-</RCC>

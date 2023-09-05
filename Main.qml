@@ -6,20 +6,24 @@ ApplicationWindow {
     visible: true
     width: 400
     height: 400
-    title: "Menu Principal"
+    title: "The Walking Dead"
     font.bold: true
+
+    function generateRandomNumber(min, max) {
+       return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
     StackView {
         id: stackView
         anchors.fill: parent
 
-        initialItem: mainPage // Página inicial
+        initialItem: mainPage
 
         Component {
             id: mainPage
 
             Rectangle {
-                color: Material.color(Material.Amber)
+                color: Material.color(Material.Red)
                 width: 400
                 height: 400
 
@@ -28,49 +32,53 @@ ApplicationWindow {
                     spacing: 20
 
                     Text {
-                        text: "Configuração de Rede"
+                        text: "Random Character Creation"
                         font.bold: true
                         font.pointSize: 16
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
 
                     Button {
-                        text: "Endereço IP"
+                        text: "The Criminal"
                         width: 200
                         height: 50
                         Material.elevation: 50
+                        anchors.horizontalCenter: parent.horizontalCenter
                         onClicked: {
-                            stackView.push(ipPage)
+                            stackView.push(theCriminal)
                         }
                     }
 
                     Button {
-                        text: "Wireless"
+                        text: "The Nobody"
                         width: 200
                         height: 50
                         Material.elevation: 50
+                        anchors.horizontalCenter: parent.horizontalCenter
                         onClicked: {
-                            stackView.push(wirelessPage)
+                            stackView.push(theNobody)
                         }
                     }
 
                     Button {
-                        text: "Posto"
+                        text: "The Scientist"
                         width: 200
                         height: 50
                         Material.elevation: 50
+                        anchors.horizontalCenter: parent.horizontalCenter
                         onClicked: {
-                            stackView.push(postoPage)
+                            stackView.push(theScientist)
                         }
                     }
 
                     Button {
-                        text: "Opções"
+                        text: "The Soldier"
                         width: 200
                         height: 50
                         Material.elevation: 50
+                        anchors.horizontalCenter: parent.horizontalCenter
                         onClicked: {
-                            stackView.push(opcoesPage)
+                            stackView.push(theSoldier)
                         }
                     }
                 }
@@ -78,10 +86,10 @@ ApplicationWindow {
         }
 
         Component {
-            id: ipPage
+            id: theCriminal
 
             Rectangle {
-                color: Material.color(Material.Amber)
+                color: Material.color(Material.Red)
                 width: 400
                 height: 400
 
@@ -89,87 +97,76 @@ ApplicationWindow {
                     anchors.centerIn: parent
                     spacing: 20
 
-                    Text {
-                        text: "Endereço IP"
+                    Label {
+                        width: 100
+                        height: 50
+                        text: "Key Attribute: Strength"
                         font.bold: true
                         font.pointSize: 16
-                        anchors.horizontalCenter: parent.horizontalCenter
                     }
 
-                    Row {
-                        spacing: 20
-                        Label {
-                            text: "Conexão"
-                            width: 120
-                            height: 50
-                        }
-                        TextField {
-                            placeholderText: "Conexão"
-                            width: 200
-                            height: 40
-                        }
+                    Label {
+                        width: 100
+                        height: 50
+                        text: "Key Skill: Close Combat"
+                        font.bold: true
+                        font.pointSize: 16
                     }
 
-                    Row {
-                        spacing: 20
-                        Label {
-                            text: "Máscara de Rede"
-                            width: 120
-                            height: 50
-                        }
-                        TextField {
-                            placeholderText: "Máscara de Rede"
-                            width: 200
-                            height: 40
-                        }
+                    Label {
+                        property string criminalTalentName: ""
+
+                        id: labelCriminal
+                        width: 100
+                        height: 50
+                        text: "Talent: " + labelCriminal.criminalTalentName
+                        font.bold: true
+                        font.pointSize: 16
                     }
 
-                    Row {
-                        spacing: 20
-                        Label {
-                            text: "Router"
-                            width: 120
-                            height: 50
-                        }
-                        TextField {
-                            placeholderText: "Router"
-                            width: 200
-                            height: 40
-                        }
-                    }
-                    Row {
-                        spacing: 20
-                        Label {
-                            text: "Endereço IP"
-                            width: 120
-                            height: 50
-                        }
-                        TextField {
-                            placeholderText: "Endereço IP"
-                            width: 200
-                            height: 40
-                        }
-                    }
+                    Button {
+                        property int criminalTalentNumber: generateRandomNumber(1, 3);
 
-                    Row {
-                        anchors.horizontalCenter: parent.horizontalCenter
-                        spacing: 10
+                        text: "Random Talent"
+                        onClicked: {
+                            switch (criminalTalentNumber) {
+                                case 1:
+                                    labelCriminal.criminalTalentName = "Threatening Posture"
+                                    break;
 
-                        Button {
-                            text: "Salvar"
-                            onClicked: {
-                                // Lógica para salvar as configurações de rede aqui
-                                // Você pode acessar os valores dos textboxes usando textfield1.text, textfield2.text, etc.
-                            }
-                        }
+                                case 2:
+                                    labelCriminal.criminalTalentName = "Fixer"
+                                    break;
 
-                        Button {
-                            text: "Cancelar"
-                            onClicked: {
-                                stackView.pop()
+                                case 3:
+                                    labelCriminal.criminalTalentName = "Fights Dirty"
+                                    break;
                             }
                         }
                     }
+
+
+
+
+//                    Row {
+//                        anchors.horizontalCenter: parent.horizontalCenter
+//                        spacing: 10
+
+//                        Button {
+//                            text: "Salvar"
+//                            onClicked: {
+//                                // Lógica para salvar as configurações de rede aqui
+//                                // Você pode acessar os valores dos textboxes usando textfield1.text, textfield2.text, etc.
+//                            }
+//                        }
+
+//                        Button {
+//                            text: "Cancelar"
+//                            onClicked: {
+//                                stackView.pop()
+//                            }
+//                        }
+//                    }
                 }
             }
         }
@@ -178,7 +175,7 @@ ApplicationWindow {
             id: wirelessPage
 
             Rectangle {
-                color: Material.color(Material.Amber)
+                color: Material.color(Material.Red)
                 width: 400
                 height: 400
 

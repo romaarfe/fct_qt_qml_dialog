@@ -4,7 +4,7 @@ project(firstDialog VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Gui Qml Quick QuickControls2)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Gui Qml Quick)
 
 qt_standard_project_setup(REQUIRES 6.5)
 
@@ -31,7 +31,6 @@ set_target_properties(appfirstDialog PROPERTIES
 
 target_link_libraries(appfirstDialog
     PRIVATE Qt::Quick
-    PRIVATE Qt::QuickControls2
     PRIVATE Qt::Core
     PRIVATE Qt::Gui
     PRIVATE Qt::Qml
